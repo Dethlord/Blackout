@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C93BC4E3-AC2B-4171-987E-AB8B386F1178}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Blackout.My.MyApplication</StartupObject>
+    <RootNamespace>Blackout</RootNamespace>
+    <AssemblyName>Blackout</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>Off</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <ApplicationIcon>kpoker.ico</ApplicationIcon>
+    <ManifestCertificateThumbprint>ABF42C0B513A17137125DBA7B6BA85FB257A1696</ManifestCertificateThumbprint>
+    <ManifestKeyFile>Русский покер_TemporaryKey.pfx</ManifestKeyFile>
+    <GenerateManifests>true</GenerateManifests>
+    <SignManifests>false</SignManifests>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+    <TargetZone>LocalIntranet</TargetZone>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Паха\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.26.8.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Blackout.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>Blackout.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.DirectX.DirectSound, Version=1.0.2902.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
+    <Compile Include="Dialog1.Designer.vb">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog2.Designer.vb">
+      <DependentUpon>Dialog2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog4.Designer.vb">
+      <DependentUpon>Dialog4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog4.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.vb">
+      <DependentUpon>Form2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dialog1.resx">
+      <DependentUpon>Dialog1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog2.resx">
+      <DependentUpon>Dialog2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog4.resx">
+      <DependentUpon>Dialog4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>Клиентский профиль .NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Установщик Windows 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безимени-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безимени-2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безимени-3.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безимени-4.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безимени-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Безимени-6.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Взятие взятки.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 буби.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 буба.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\7 чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 буба.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8 чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9 буба.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9 крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9 пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9 чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10 буби.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10 крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10 пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\10 чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Валет бубны.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Валет чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Дама бубны.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Король бубны.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Король крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Король пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Король чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Туз буби.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Туз крести.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Туз пик.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Туз чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Стандарт рубашки.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Бренд.JPG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Фон.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6Б.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6С.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПасБ.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ПасС.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1Б.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1С.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2Б.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2С.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3Б.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3С.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4Б.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4С.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5Б.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5С.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Звук ставки.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Звук старта.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Пас.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3-Пас.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4-Пас.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5-Пас.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-Пас.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6-3.png" />
+    <None Include="Русский покер_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Соло.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\безкозырка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Темная.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\трио.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\дуэт.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Бескозырка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Золотая.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Квадрат.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Лбы.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Обязаловка.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Пентет2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Минус.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ноль.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Плюс.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 отк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 отк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 отк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 отк.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_66.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1_55.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 шлем.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Дама чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Валет_чирва.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\6 место.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\5 место.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 место.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1 откп.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2 откп.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3 откп.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\4 откп.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\11п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\12п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\13п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\15п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\21п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\22п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\23п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\24п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\25п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\26п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\27п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\28п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\29п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\30п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\31п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\32п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\33п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\35п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\36п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\37п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\38п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\39п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\40п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\41п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\42п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\44п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\45п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\46п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\47п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\48п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\49п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Минус п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ноль п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Плюс п.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Алекс.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Джон.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ирина.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Мария.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Спок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Игрок.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="kpoker.ico" />
+    <None Include="Resources\профС.png" />
+    <None Include="Resources\ОтменаТ.png" />
+    <None Include="Resources\ОтменаС.png" />
+    <None Include="Resources\профТ.png" />
+    <None Include="Resources\Логотип.png" />
+    <None Include="Resources\Логотип маджестик без фона.png" />
+    <None Include="Resources\Рубашка.png" />
+    <None Include="Resources\6 шлем.png" />
+    <None Include="Resources\5 шлем.png" />
+    <None Include="Resources\4 шлем.png" />
+    <None Include="Resources\3 шлем.png" />
+    <None Include="Resources\2 шлем.png" />
+    <None Include="Resources\6 место.wav" />
+    <None Include="Resources\3 место.wav" />
+    <None Include="Resources\4 место.wav" />
+    <None Include="Resources\2 место.wav" />
+    <None Include="Resources\5 место.wav" />
+    <None Include="Resources\1 место.wav" />
+    <None Include="Resources\Внимание безкоз.режим.wav" />
+    <None Include="Resources\У вас покер.wav" />
+    <None Include="Resources\Все поля обяз.wav" />
+    <None Include="Resources\Звук карт.WAV" />
+    <None Include="Resources\супер шлем.wav" />
+    <None Include="Resources\начальный шлем.wav" />
+    <None Include="Resources\двойной шлем.wav" />
+    <None Include="Resources\шлем с пяти.wav" />
+    <None Include="Resources\шлем каре.wav" />
+    <None Include="Resources\тройной шлем.wav" />
+    <None Include="Resources\ЗаявкаС.png" />
+    <None Include="Resources\ЗаявкаТ.png" />
+    <None Include="Resources\Рекорд3.png" />
+    <None Include="Resources\Кнопка турнирная таблицаС.png" />
+    <None Include="Resources\Кнопка турнирная таблицаТ.png" />
+    <None Include="Resources\Кнопка новая игра малаяС.png" />
+    <None Include="Resources\Кнопка новая игра малаяТ.png" />
+    <None Include="Resources\Кнопка новая игра копияС.png" />
+    <None Include="Resources\Кнопка новая игра копияТ.png" />
+    <None Include="Resources\Медный кубок.png" />
+    <None Include="Resources\Золотой кубок.png" />
+    <None Include="Resources\Серебрянный кубок.png" />
+    <None Include="Resources\Пьедестал.png" />
+    <None Include="My Project\app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Resources\Не старшая.wav" />
+    <None Include="Resources\Ваш профиль сохранен.wav" />
+    <None Include="Resources\Заявка отправленна.wav" />
+    <None Include="Resources\По самым ст картам.wav" />
+    <None Include="Resources\По старшим коз и кар.wav" />
+    <None Include="Resources\Не спеши.wav" />
+    <None Include="Resources\пики.wav" />
+    <None Include="Resources\червы.wav" />
+    <None Include="Resources\бубны.wav" />
+    <None Include="Resources\крести.wav" />
+    <None Include="Resources\Старт.wav" />
+    <None Include="Resources\Валет крести.png" />
+    <None Include="Resources\Дама пика.png" />
+    <None Include="Resources\Дама крести.png" />
+    <None Include="Resources\Валет пика.png" />
+    <None Include="Resources\ддд.png" />
+    <None Include="Resources\333.png" />
+    <None Include="Resources\Рубашка_Биг.png" />
+    <None Include="Resources\Стандарт рубашки.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
