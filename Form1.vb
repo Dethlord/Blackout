@@ -959,6 +959,10 @@ Public Class Form1
                 Next Card
             Next aa
         End If
+
+
+
+
     End Sub
 
     Sub Normalization()
@@ -967,17 +971,30 @@ Public Class Form1
         For Card As Integer = 1 To NumberOfCards
             For Player = 1 To 4
                 Znach = CardsPlaversPow(Player, Card)
-                If Znach <= 4 Then CardsPlaversPow(Player, Card) = 6
-                If Znach >= 5 And Znach <= 8 Then CardsPlaversPow(Player, Card) = 7
-                If Znach >= 9 And Znach <= 12 Then CardsPlaversPow(Player, Card) = 8
-                If Znach >= 13 And Znach <= 16 Then CardsPlaversPow(Player, Card) = 9
-                If Znach >= 17 And Znach <= 20 Then CardsPlaversPow(Player, Card) = 10
-                If Znach >= 21 And Znach <= 23 Then CardsPlaversPow(Player, Card) = 11
-                If Znach >= 25 And Znach <= 28 Then CardsPlaversPow(Player, Card) = 12
-                If Znach >= 29 And Znach <= 32 Then CardsPlaversPow(Player, Card) = 13
-                If Znach >= 33 And Znach <= 36 Then CardsPlaversPow(Player, Card) = 14
+                'If Znach <= 4 Then CardsPlaversPow(Player, Card) = 6
+                'If Znach >= 5 And Znach <= 8 Then CardsPlaversPow(Player, Card) = 7
+                'If Znach >= 9 And Znach <= 12 Then CardsPlaversPow(Player, Card) = 8
+                'If Znach >= 13 And Znach <= 16 Then CardsPlaversPow(Player, Card) = 9
+                'If Znach >= 17 And Znach <= 20 Then CardsPlaversPow(Player, Card) = 10
+                'If Znach >= 21 And Znach <= 23 Then CardsPlaversPow(Player, Card) = 11
+                'If Znach >= 25 And Znach <= 28 Then CardsPlaversPow(Player, Card) = 12
+                'If Znach >= 29 And Znach <= 32 Then CardsPlaversPow(Player, Card) = 13
+                'If Znach >= 33 And Znach <= 36 Then CardsPlaversPow(Player, Card) = 14
+                'If Znach = 24 Then CardsPlaversPow(Player, Card) = 200 'Это значение козырного вальта бубен и его же с правом хода
 
-                If Znach = 24 Then CardsPlaversPow(Player, Card) = 200 'Это значение козырного вальта бубен и его же с правом хода
+                If (Znach = 24) Then
+                    CardsPlaversPow(Player, Card) = 200
+                ElseIf (Znach >= 33) Then : CardsPlaversPow(Player, Card) = 14
+                ElseIf (Znach >= 29) Then : CardsPlaversPow(Player, Card) = 13
+                ElseIf (Znach >= 25) Then : CardsPlaversPow(Player, Card) = 12
+                ElseIf (Znach >= 21) Then : CardsPlaversPow(Player, Card) = 11
+                ElseIf (Znach >= 17) Then : CardsPlaversPow(Player, Card) = 10
+                ElseIf (Znach >= 13) Then : CardsPlaversPow(Player, Card) = 9
+                ElseIf (Znach >= 9) Then : CardsPlaversPow(Player, Card) = 8
+                ElseIf (Znach >= 5) Then : CardsPlaversPow(Player, Card) = 7
+                ElseIf (Znach <= 4) Then : CardsPlaversPow(Player, Card) = 6
+                End If
+
             Next Player
         Next Card
 
