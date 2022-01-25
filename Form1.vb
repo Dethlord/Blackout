@@ -924,18 +924,21 @@ Public Class Form1
                 MsgBox("Бескозырный режим")
             End If
         End If
-        'Оповестить игрока о наличии покера у него на руках(кроме темной и в лбах)
-        If Not (Round = 17 Or Round = 18 Or Round = 19 Or Round = 23 Or Round = 24 Or Round = 25) Then
-            For ii = 1 To NumberOfCards
-                If CardsPlavers(1, ii) = 24 Then
-                    If Sound Then
-                        SoundPokHave.PlaySync()
-                    Else
-                        MsgBox("У вас покер!")
+        'Оповестить игрока о наличии покера у него на руках(кроме темной и в лбах или при наличии одной карты)
+        If Not NumberOfCards = 1 Then
+            If Not (Round = 17 Or Round = 18 Or Round = 19 Or Round = 23 Or Round = 24 Or Round = 25) Then
+                For ii = 1 To NumberOfCards
+                    If CardsPlavers(1, ii) = 24 Then
+                        If Sound Then
+                            SoundPokHave.PlaySync()
+                        Else
+                            MsgBox("У вас покер!")
+                        End If
                     End If
-                End If
-            Next ii
+                Next ii
+            End If
         End If
+
 
     End Sub
 
