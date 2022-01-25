@@ -946,11 +946,11 @@ Public Class Form1
 
     Sub TrumpCheck()
         'Проверка игроков на козырную карту если есть то +100 к карте
-        If Not (Trump = 24) And Not (NumberOfCards = 6) Then 'Обход при козырном покере(бескозырка) и в бескозырке
+        If Not (Trump = 24) Or Not (NumberOfCards = 6) Then 'Обход при козырном покере(бескозырка) и в бескозырке
             For aa = 1 To 9
                 For Card = 1 To NumberOfCards
                     For plaver = 1 To 4
-                        If Not CardsPlavers(plaver, Card) = 24 Then 'Не прибавлять +100 к вальту если масть будет бубны
+                        If Not CardsPlavers(plaver, Card) = 24 Then 'Не прибавлять +100 к вальту если козырная масть будет бубны
                             If StartArray(aa, GetTrumpColumn) = CardsPlavers(plaver, Card) Then
                                 CardsPlaversPow(plaver, Card) = CardsPlaversPow(plaver, Card) + 100
                             End If
@@ -980,6 +980,7 @@ Public Class Form1
                 If Znach = 24 Then CardsPlaversPow(Player, Card) = 200 'Это значение козырного вальта бубен и его же с правом хода
             Next Player
         Next Card
+
 
     End Sub
     Sub CalcWiner() 'Расчет очков всех игроков
