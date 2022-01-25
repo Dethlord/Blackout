@@ -512,13 +512,13 @@ Public Class Form1
                 Case 2, 3, 4, 5, 6
                     'Если выбранная карта находится в том же ряду что и активная то разршить ход и обавить +50 к ценности
                     gak = GetActiveCardColumn()
-                    For aa As Integer = 1 To 9
-                        If CardsPlavers(RightToMove, CurentSelectCard) = StartArray(aa, gak) Then
+                    For row As Integer = 1 To 9
+                        If CardsPlavers(RightToMove, CurentSelectCard) = StartArray(row, gak) Then
                             CardsPlaversPow(RightToMove, CurentSelectCard) += 50
                             isDiscard = True
                             Exit Function
                         End If
-                    Next aa
+                    Next row
             End Select
 
             'Если имеется карта совпадающая с рядом активной то не дать ходить кроме её(их)
