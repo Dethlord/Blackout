@@ -110,39 +110,19 @@ Module Module1
             cb(t).Visible = True
         Next t
     End Sub
-    'Обьявление массива случайных чисел
+    'Обьявление массива уникальных случайных чисел
     Sub InitDeckArray()
-        Dim Random, F As Integer
-        For w As Integer = 1 To 36
-
-START:
-            Random = Int((36 * Rnd()) + 1)
-            'Проверка:а нет ли такого же числа в массиве?
-            For d = 1 To 36
-                If RndDeck(d) = Random Then
-                    GoTo START
-                    Exit For
-                End If
-
-
-            Next d
-            F = F + 1
-            RndDeck(F) = Random
-        Next w
-        'Select Case Tur
-        '    Case 1
-        '        RndRad(30) = 24
-        '    Case 2
-        '        RndRad(24) = 24
-        '    Case 3
-        '        RndRad(18) = 24
-        '    Case 4
-        '        RndRad(12) = 24
-        '    Case 5
-        '        RndRad(6) = 24
-        'End Select
-
+        Dim rnd As New Random
+        Dim temp As Integer
+        For i = 1 To 36 : RndDeck(i) = i : Next
+        For i As Integer = RndDeck.Count - 1 To 0 Step -1
+            Dim j As Integer = rnd.Next(1, i + 1)
+            temp = RndDeck(i)
+            RndDeck(i) = RndDeck(j)
+            RndDeck(j) = temp
+        Next
     End Sub
+
     Sub MainMasiv()
         Dim i As Integer
         For a As Integer = 1 To 9
