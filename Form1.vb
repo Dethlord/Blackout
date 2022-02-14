@@ -710,7 +710,7 @@ Public Class Form1
         PicPravo3.Visible = False
         PicPravo4.Visible = False
 
-        'Выход козыря из игры нас интересует непосредственно в бескозырке
+        'Выход джокера из игры нас интересует непосредственно в бескозырке
         If Round >= 6 And Round <= 11 Then
             isTrampOver = False
         Else
