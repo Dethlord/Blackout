@@ -167,22 +167,15 @@ START:
         Next w2
     End Sub
     Public Function GetTrumpColumn()
-        Trump = Trump Mod 4
-        If Trump = 0 Then Trump = 1
-        Return Trump
+        result = Trump Mod 4
+        If result = 0 Then result = 1
+        Return result
     End Function
 
     Public Function GetActiveCardColumn()
-        'Функция определения в каком ряду активная карта
-        For aa As Integer = 1 To 9
-            For bb As Integer = 1 To 4
-                If ActiveCard = StartArray(aa, bb) Then
-                    Return bb
-                    Exit Function
-                End If
-            Next bb
-        Next aa
-        Return 0
+        result = ActiveCard Mod 4
+        If result = 0 Then result = 1
+        Return result
     End Function
 
     'Функция отдачи нижнего порога ставки
