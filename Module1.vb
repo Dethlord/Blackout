@@ -167,18 +167,10 @@ START:
         Next w2
     End Sub
     Public Function GetTrumpColumn()
-        'Функция определения в какой колонке находится козырь(1 до 4)''''''''
-        For aa As Integer = 1 To 9
-            For bb As Integer = 1 To 4
-                If Trump = StartArray(aa, bb) Then
-                    Return bb
-                    Exit Function
-                End If
-            Next bb
-        Next aa
-        Return 0
+        Trump = Trump Mod 4
+        If Trump = 0 Then Trump = 1
+        Return Trump
     End Function
-
     'Public Function GetPlaverColumn() отказался от этой функции так как была уже аналогичная GetActiveCardColumn()
     '    'Функция определения в какой колонке находится карта игрока с правом хода(1 до 4)
     '    For aa As Integer = 1 To 9
